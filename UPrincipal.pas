@@ -23,6 +23,14 @@ type
     btn_veiculos: TButton;
     Label1: TLabel;
     StyleBook1: TStyleBook;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Layout4: TLayout;
+    Image3: TImage;
+    Label2: TLabel;
+    Label3: TLabel;
    
   private
     { Private declarations }
