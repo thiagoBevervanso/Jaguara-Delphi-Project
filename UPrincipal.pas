@@ -5,7 +5,9 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
-  FMX.Layouts, FMX.TabControl, FMX.Controls.Presentation, FMX.StdCtrls;
+  FMX.Layouts, FMX.TabControl, FMX.Controls.Presentation, FMX.StdCtrls,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.ListView;
 
 type
   TFrmPrincipal = class(TForm)
@@ -31,6 +33,11 @@ type
     Image3: TImage;
     Label2: TLabel;
     Label3: TLabel;
+    Panel3: TPanel;
+    ListView1: TListView;
+    Label6: TLabel;
+    Image4: TImage;
+    Image5: TImage;
    
   private
     { Private declarations }
