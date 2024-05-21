@@ -7,7 +7,13 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Layouts, FMX.TabControl, FMX.Controls.Presentation, FMX.StdCtrls,
   FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
-  FMX.ListView, System.Rtti, FMX.Grid.Style, FMX.ScrollBox, FMX.Grid;
+  FMX.ListView, System.Rtti, FMX.Grid.Style, FMX.ScrollBox, FMX.Grid,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef,
+  FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.FMXUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TFrmPrincipal = class(TForm)
@@ -25,10 +31,10 @@ type
     btn_veiculos: TButton;
     Label1: TLabel;
     StyleBook1: TStyleBook;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
+    ButtonRoxo: TButton;
+    ButtonVermelho: TButton;
+    ButtonVerde: TButton;
+    ButtonCinza: TButton;
     Layout4: TLayout;
     Image3: TImage;
     Label2: TLabel;
@@ -41,11 +47,23 @@ type
     TabItem3: TTabItem;
     TabItem4: TTabItem;
     TabItem5: TTabItem;
+    Layout5: TLayout;
+    Layout6: TLayout;
+    lv: TListView;
+    Panel3: TPanel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
     procedure btn_gridClick(Sender: TObject);
     procedure btn_DashboardClick(Sender: TObject);
     procedure btn_TempClick(Sender: TObject);
     procedure btn_SolicitacoesClick(Sender: TObject);
     procedure btn_veiculosClick(Sender: TObject);
+    procedure insereListaTemp();
 
 
   private
@@ -94,5 +112,24 @@ procedure TFrmPrincipal.btn_veiculosClick(Sender: TObject);
 begin
   TabControl1.TabIndex := 4;
 end;
+
+procedure TFrmPrincipal.insereListaTemp;
+var
+  ListItem: TListViewItem;
+begin
+   //Limpa a lista antes de adicionar novos itens (opcional)
+  lv.Items.Clear;
+
+   //Adiciona um novo item à lista
+  ListItem := lv.Items.Add;
+
+
+  TListItemText(ListItem.Objects.FindDrawable('txtViagem')).Text := '22123';
+  TListItemText(ListItem.Objects.FindDrawable('txtVeiculo')).Text := 'Scania 32fx';
+  TListItemText(ListItem.Objects.FindDrawable('txtAndamento')).Text := '645 km andados';
+  TListItemText(ListItem.Objects.FindDrawable('txtTemp')).Text := '24 C';
+  TListItemText(ListItem.Objects.FindDrawable('txtRisco')).Text := 'baixo';
+end;
+
 
 end.

@@ -2801,7 +2801,7 @@ object FrmPrincipal: TFrmPrincipal
           end
         end
       end
-      object Button1: TButton
+      object ButtonRoxo: TButton
         Cursor = crHandPoint
         StyledSettings = [Family, FontColor]
         Position.X = 255.000000000000000000
@@ -2815,7 +2815,7 @@ object FrmPrincipal: TFrmPrincipal
         TextSettings.Font.Size = 16.000000000000000000
         TextSettings.Font.StyleExt = {00060000000000000004000000}
       end
-      object Button2: TButton
+      object ButtonVermelho: TButton
         Cursor = crHandPoint
         StyledSettings = [Family]
         Position.X = 440.000000000000000000
@@ -2830,7 +2830,7 @@ object FrmPrincipal: TFrmPrincipal
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = claWhite
       end
-      object Button3: TButton
+      object ButtonVerde: TButton
         Cursor = crHandPoint
         StyledSettings = [Family]
         Position.X = 625.000000000000000000
@@ -2845,7 +2845,7 @@ object FrmPrincipal: TFrmPrincipal
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = claWhite
       end
-      object Button4: TButton
+      object ButtonCinza: TButton
         Cursor = crHandPoint
         StyledSettings = [Family]
         Position.X = 810.000000000000000000
@@ -3869,27 +3869,27 @@ object FrmPrincipal: TFrmPrincipal
         Size.Width = 856.000000000000000000
         Size.Height = 382.000000000000000000
         Size.PlatformDefault = False
-        TabIndex = 0
+        TabIndex = 2
         TabOrder = 8
-        TabPosition = PlatformDefault
+        TabPosition = None
         Sizes = (
           856s
-          356s
+          382s
           856s
-          356s
+          382s
           856s
-          356s
+          382s
           856s
-          356s
+          382s
           856s
-          356s)
+          382s)
         object TabItem1: TTabItem
           CustomIcon = <
             item
             end>
-          IsSelected = True
-          Size.Width = 43.000000000000000000
-          Size.Height = 26.000000000000000000
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
@@ -3900,8 +3900,8 @@ object FrmPrincipal: TFrmPrincipal
             item
             end>
           IsSelected = False
-          Size.Width = 78.000000000000000000
-          Size.Height = 26.000000000000000000
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
@@ -3911,21 +3911,164 @@ object FrmPrincipal: TFrmPrincipal
           CustomIcon = <
             item
             end>
-          IsSelected = False
-          Size.Width = 87.000000000000000000
-          Size.Height = 26.000000000000000000
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
           Text = 'Temperatura'
+          object Layout5: TLayout
+            Align = Top
+            Size.Width = 856.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Panel3: TPanel
+              Align = Contents
+              Size.Width = 856.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'panelBlue'
+              TabOrder = 0
+              object Label4: TLabel
+                StyledSettings = [Family]
+                Position.X = 9.000000000000000000
+                Position.Y = 16.000000000000000000
+                Size.Width = 64.000000000000000000
+                Size.Height = 26.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 16.000000000000000000
+                TextSettings.Font.StyleExt = {00060000000000000004000000}
+                TextSettings.FontColor = claWhite
+                Text = 'Viagem'
+                TabOrder = 0
+                object Label5: TLabel
+                  StyledSettings = [Family]
+                  Position.X = 80.000000000000000000
+                  Size.Width = 64.000000000000000000
+                  Size.Height = 26.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  TextSettings.FontColor = claWhite
+                  Text = 'Veiculo'
+                  TabOrder = 1
+                  object Label6: TLabel
+                    StyledSettings = [Family]
+                    Position.X = 144.000000000000000000
+                    Size.Width = 113.000000000000000000
+                    Size.Height = 26.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00060000000000000004000000}
+                    TextSettings.FontColor = claWhite
+                    Text = 'Andamento'
+                    TabOrder = 1
+                    object Label7: TLabel
+                      StyledSettings = [Family]
+                      Position.X = 185.000000000000000000
+                      Size.Width = 113.000000000000000000
+                      Size.Height = 26.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 16.000000000000000000
+                      TextSettings.Font.StyleExt = {00060000000000000004000000}
+                      TextSettings.FontColor = claWhite
+                      Text = 'Temperatura'
+                      TabOrder = 1
+                      object Label8: TLabel
+                        StyledSettings = [Family]
+                        Position.X = 160.000000000000000000
+                        Size.Width = 113.000000000000000000
+                        Size.Height = 26.000000000000000000
+                        Size.PlatformDefault = False
+                        TextSettings.Font.Size = 16.000000000000000000
+                        TextSettings.Font.StyleExt = {00060000000000000004000000}
+                        TextSettings.FontColor = claWhite
+                        Text = 'Risco'
+                        TabOrder = 1
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+          object Layout6: TLayout
+            Align = Client
+            Size.Width = 856.000000000000000000
+            Size.Height = 332.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object lv: TListView
+              ItemAppearanceClassName = 'TDynamicAppearance'
+              ItemEditAppearanceClassName = 'TDynamicAppearance'
+              HeaderAppearanceClassName = 'TListHeaderObjects'
+              FooterAppearanceClassName = 'TListHeaderObjects'
+              ItemSpaces.Left = 0.000000000000000000
+              ItemSpaces.Right = 0.000000000000000000
+              Align = Client
+              Size.Width = 856.000000000000000000
+              Size.Height = 332.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+                item
+                  AppearanceObjectName = 'txtViagem'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.Font.Size = 14.000000000000000000
+                  Appearance.Width = 65.000000000000000000
+                  Appearance.Height = 44.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'txtVeiculo'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.Font.Size = 14.000000000000000000
+                  Appearance.Width = 80.000000000000000000
+                  Appearance.Height = 44.000000000000000000
+                  Appearance.PlaceOffset.X = 88.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'txtAndamento'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.Font.Size = 14.000000000000000000
+                  Appearance.Width = 90.000000000000000000
+                  Appearance.Height = 44.000000000000000000
+                  Appearance.PlaceOffset.X = 224.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'txtTemp'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.Font.Size = 14.000000000000000000
+                  Appearance.Width = 70.000000000000000000
+                  Appearance.Height = 44.000000000000000000
+                  Appearance.PlaceOffset.X = 416.000000000000000000
+                end
+                item
+                  AppearanceObjectName = 'txtRisco'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                  Appearance.Font.Size = 14.000000000000000000
+                  Appearance.Width = 80.000000000000000000
+                  Appearance.Height = 44.000000000000000000
+                  Appearance.PlaceOffset.X = 576.000000000000000000
+                end>
+              ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+                item
+                  AppearanceObjectName = 'Text1'
+                  AppearanceClassName = 'TTextObjectAppearance'
+                end>
+              CanSwipeDelete = False
+              ShowSelection = False
+            end
+          end
         end
         object TabItem4: TTabItem
           CustomIcon = <
             item
             end>
           IsSelected = False
-          Size.Width = 82.000000000000000000
-          Size.Height = 26.000000000000000000
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
@@ -3936,8 +4079,8 @@ object FrmPrincipal: TFrmPrincipal
             item
             end>
           IsSelected = False
-          Size.Width = 63.000000000000000000
-          Size.Height = 26.000000000000000000
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
@@ -5878,5 +6021,18 @@ object FrmPrincipal: TFrmPrincipal
       end>
     Left = 304
     Top = 104
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\prog\DELPHI\Projeto_jaguara\JaguaraDB'
+      'DriverID=SQLite')
+    Connected = True
+    Left = 872
+    Top = 16
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    Left = 808
+    Top = 16
   end
 end

@@ -1,0 +1,131 @@
+unit UPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.TabControl, FMX.Controls.Presentation, FMX.StdCtrls,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.ListView, System.Rtti, FMX.Grid.Style, FMX.ScrollBox, FMX.Grid,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef,
+  FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.FMXUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TFrmPrincipal = class(TForm)
+    Layout1: TLayout;
+    Image1: TImage;
+    Layout2: TLayout;
+    Panel1: TPanel;
+    Layout3: TLayout;
+    Panel2: TPanel;
+    Image2: TImage;
+    btn_grid: TButton;
+    btn_Dashboard: TButton;
+    btn_Temp: TButton;
+    btn_Solicitacoes: TButton;
+    btn_veiculos: TButton;
+    Label1: TLabel;
+    StyleBook1: TStyleBook;
+    ButtonRoxo: TButton;
+    ButtonVermelho: TButton;
+    ButtonVerde: TButton;
+    ButtonCinza: TButton;
+    Layout4: TLayout;
+    Image3: TImage;
+    Label2: TLabel;
+    Label3: TLabel;
+    Image4: TImage;
+    Image5: TImage;
+    TabControl1: TTabControl;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+    TabItem3: TTabItem;
+    TabItem4: TTabItem;
+    TabItem5: TTabItem;
+    Layout5: TLayout;
+    Layout6: TLayout;
+    lv: TListView;
+    Panel3: TPanel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
+    procedure btn_gridClick(Sender: TObject);
+    procedure btn_DashboardClick(Sender: TObject);
+    procedure btn_TempClick(Sender: TObject);
+    procedure btn_SolicitacoesClick(Sender: TObject);
+    procedure btn_veiculosClick(Sender: TObject);
+    procedure insereListaTemp();
+
+
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+uses ULogin;
+
+
+
+{ TFrmPrincipal }
+
+
+
+procedure TFrmPrincipal.btn_DashboardClick(Sender: TObject);
+begin
+    TabControl1.TabIndex := 1;
+end;
+
+procedure TFrmPrincipal.btn_gridClick(Sender: TObject);
+begin
+  TabControl1.TabIndex := 0;
+end;
+
+procedure TFrmPrincipal.btn_SolicitacoesClick(Sender: TObject);
+begin
+  TabControl1.TabIndex := 3;
+end;
+
+procedure TFrmPrincipal.btn_TempClick(Sender: TObject);
+begin
+  TabControl1.TabIndex := 2;
+end;
+
+procedure TFrmPrincipal.btn_veiculosClick(Sender: TObject);
+begin
+  TabControl1.TabIndex := 4;
+end;
+
+procedure TFrmPrincipal.insereListaTemp;
+begin
+  lv.Items.Clear;
+  with lv.Items.Add do
+  begin
+    TListItemText(Objects.FindDrawable('txtViagem')).Text :='22123';
+    TListItemText(Objects.FindDrawable('txtVeiculo')).Text :='Scania 32fx';
+    TListItemText(Objects.FindDrawable('txtAndamento')).Text :='645 km andados';
+    TListItemText(Objects.FindDrawable('txtTemp')).Text :='24 C';
+    TListItemText(Objects.FindDrawable('txtRisco')).Text :='baixo';
+
+  end;
+
+end;
+
+end.
