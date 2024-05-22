@@ -56,8 +56,6 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    FDConnection1: TFDConnection;
-    FDQuery1: TFDQuery;
     procedure btn_gridClick(Sender: TObject);
     procedure btn_DashboardClick(Sender: TObject);
     procedure btn_TempClick(Sender: TObject);
@@ -114,15 +112,22 @@ begin
 end;
 
 procedure TFrmPrincipal.insereListaTemp;
+var
+  ListItem: TListViewItem;
 begin
-  with lv.Items.Add do
-  begin
-    TListItemText(Objects.FindDrawable('txtViagem')).Text :='22123';
-    TListItemText(Objects.FindDrawable('txtVeiculo')).Text :='Scania 32fx';
-    TListItemText(Objects.FindDrawable('txtAndamento')).Text :='645 km andados';
-    TListItemText(Objects.FindDrawable('txtTemp')).Text :='24 C';
-    TListItemText(Objects.FindDrawable('txtRisco')).Text :='baixo';
-  end;
+   //Limpa a lista antes de adicionar novos itens (opcional)
+  lv.Items.Clear;
+
+   //Adiciona um novo item à lista
+  ListItem := lv.Items.Add;
+
+
+  TListItemText(ListItem.Objects.FindDrawable('txtViagem')).Text := '22123';
+  TListItemText(ListItem.Objects.FindDrawable('txtVeiculo')).Text := 'Scania 32fx';
+  TListItemText(ListItem.Objects.FindDrawable('txtAndamento')).Text := '645 km andados';
+  TListItemText(ListItem.Objects.FindDrawable('txtTemp')).Text := '24 C';
+  TListItemText(ListItem.Objects.FindDrawable('txtRisco')).Text := 'baixo';
 end;
+
 
 end.

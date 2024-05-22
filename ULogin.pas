@@ -38,7 +38,7 @@ procedure TfrmLogin.btn_loginClick(Sender: TObject);
 begin
 
   FrmPrincipal.Show;
-  FrmLogin.Hide;
+  FrmLogin.hide;
 
 end;
 

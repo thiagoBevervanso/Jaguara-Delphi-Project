@@ -56,8 +56,7 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    FDConnection1: TFDConnection;
-    FDQuery1: TFDQuery;
+     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btn_gridClick(Sender: TObject);
     procedure btn_DashboardClick(Sender: TObject);
     procedure btn_TempClick(Sender: TObject);
@@ -87,6 +86,12 @@ uses ULogin;
 { TFrmPrincipal }
 
 
+ procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  frmLogin.Show;
+  frmLogin.Visible := true;
+
+end;
 
 procedure TFrmPrincipal.btn_DashboardClick(Sender: TObject);
 begin
@@ -112,6 +117,8 @@ procedure TFrmPrincipal.btn_veiculosClick(Sender: TObject);
 begin
   TabControl1.TabIndex := 4;
 end;
+
+
 
 procedure TFrmPrincipal.insereListaTemp;
 var
